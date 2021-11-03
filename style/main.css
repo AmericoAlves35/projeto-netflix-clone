@@ -1,0 +1,156 @@
+:root{/* raiz do documento que irá guardar as variaveis*/
+    --vermelho:#E50914;/*declaração de uma variavel *//*cor proxima do oficial da pagina Netflix */
+    --preta:#141414;/* variavel*//*cor proxima do oficial da pagina Netflix */
+    --branco:#ffffff;/* variavel*/
+}
+
+*{  /*usando o reset css */
+    margin:0;/* deixando a margem com zero*/
+    padding:0;/* deixando espaçamento com zero*/
+    box-sizing: border-box;/* um delimitador que deixa tudo dentro da caixa "<header>", podendo exprimir para caber*/
+}
+
+/*elementos base*/
+body{
+   background: var(--preta);
+   font-family: 'Arial', Times, serif;
+   color:white;
+}
+
+
+header .container{/* para editar uma caixa especifica*/
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between/*justify-content:space-between;para justificar os elementos*/
+    
+}
+
+header .logo{
+    
+    margin-left: 0px;
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times;/*a segunda fonte entrará caso o navegador não tenha a principal*/
+    font-size:40px;
+}
+
+header nav a{
+  
+    text-decoration:none;/*para tirar o formato sublinhado do link */
+    color:#AAA;
+    margin-right: 20px;/*margem, distancia entre os links*/
+}
+
+header .menu{/*margem, distancia entre os links e o Logo*/
+    margin-right: 580px;
+    
+}
+
+header .linkLogo{
+    text-decoration: none;
+}
+
+header nav a:hover{/* evento para mudar a cor quando o mouse passar em cima */
+    color:#fff;
+}
+
+/*filme principal*/
+.filme-principal{
+    font-size:16px;
+    background:linear-gradient(rgba(0, 0, 0, .50), rgba(0, 0, 0, .50)100%), url('../img/suits.jpg');
+    height:600px;
+    background-size:cover;
+ 
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+ .descricao{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+
+.titulo{
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.botao{
+    background-color: rgba(0,0,0,.50);
+    border:none;
+    color: rgb(255, 255, 255);
+
+    padding:15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+
+    cursor:pointer;
+    transition: .3s ease all;
+}
+
+.botao:hover{
+    background-color:white;
+    color:black;
+    
+}
+
+.botao i{
+    margin-right: 8px;
+}
+
+
+.container{
+    margin-left: 40px;
+}
+
+.filme-principal .container{
+    width: 70%;
+}
+
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+}
+
+
+.carrosel-filmes{
+    margin-top:9px;
+}
+
+
+
+
+@keyframes anima{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.08);
+      
+    }
+    
+}
+
+.item:hover{
+    animation-name: anima;
+    animation-iteration-count:initial;
+    animation-duration: 1.0s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1)
+}
+    
+
+
+
+
+
+
+
+
